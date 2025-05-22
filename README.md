@@ -1,12 +1,24 @@
-# 🐾 Animal Image Classifier
+# Animal Image Classification
 
-A Streamlit web application for classifying animals in images using pre-trained deep learning models (EfficientNetB0 & MobileNetV2). Built using TensorFlow and Streamlit, this app can identify 15 types of animals from user-uploaded images.
+A deep learning web application that classifies animal images into 15 categories using a fine-tuned EfficientNetB0 model. Built with TensorFlow and Streamlit, and deployable on Hugging Face Spaces.
 
-## 📌 Project Objective
+---
 
-The goal of this project is to classify images of animals into 15 different categories using transfer learning techniques with EfficientNetB0 and MobileNetV2 models.
+## Overview
 
-## 🧠 Supported Classes
+This project demonstrates image classification using transfer learning. Users can upload an image, and the app predicts the animal category with a confidence score.
+
+---
+
+## Features
+
+- **Transfer Learning**: EfficientNetB0 model trained on a labeled animal image dataset.
+- **Streamlit Web App**: Simple and intuitive interface for users to upload and classify images.
+- **Ready for Deployment**: Easily deployable to Hugging Face Spaces.
+
+---
+
+## Supported Animal Classes
 
 - Bear
 - Bird
@@ -24,104 +36,72 @@ The goal of this project is to classify images of animals into 15 different cate
 - Tiger
 - Zebra
 
-## 🗂️ Project Structure
+---
 
-📁 animal-image-classifier/
-├── app.py # Streamlit web app
-├── efficientnetb0_best.h5 # Trained model (EfficientNetB0)
-├── mobilenetv2_best.h5 # Trained model (MobileNetV2)
-├── requirements.txt # Python dependencies
-├── ml animal classification.ipynb # Model training and evaluation notebook
-└── README.md # Project documentation
+## Project Structure
 
-bash
-Copy
-Edit
+```
+animal-image-classification/
+├──Dataset                         # Folder containing 15 categories of animal images
+├── app.py                         # Streamlit application
+├── efficientnetb0_best.h5         # Pretrained model (EfficientNetB0)
+├── mobilenetv2_best.h5            # Optional pretrained model
+├── ml animal classification.ipynb # Training notebook
+├── requirements.txt               # Dependencies
+├── Image Classification of animals.pdf  # Project summary
+└── README.md                      # Project documentation
+```
 
-## 🚀 Getting Started
+---
 
-### 🔧 Installation
+## Getting Started
 
-1. Clone the repository:
+### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/Hurmath123/animal-image-classifier.git
 cd animal-image-classifier
-Create a virtual environment and activate it:
+```
 
-bash
-Copy
-Edit
+### 2. Set Up a Virtual Environment
+
+```bash
 python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-Install the dependencies:
+source venv/bin/activate  # Windows: venv\Scripts\activate
+```
 
-bash
-Copy
-Edit
+### 3. Install Dependencies
+
+```bash
 pip install -r requirements.txt
-▶️ Run the Streamlit App
-bash
-Copy
-Edit
+```
+
+### 4. Run the App
+
+```bash
 streamlit run app.py
-📷 Usage
-Upload an image (.jpg, .jpeg, or .png)
+```
 
-The model will display the predicted animal class and confidence score
+---
 
-🧾 Model Training
-See the ml animal classification.ipynb notebook for the training and evaluation process using transfer learning.
+## Deploy to Hugging Face
 
-🧳 Deployment
-This app is also deployable on Hugging Face Spaces using Streamlit.
+1. Go to [Hugging Face Spaces](https://huggingface.co/spaces)
+2. Click **Create new Space** → Choose **Streamlit** and **Python**
+3. Upload:
+   - `app.py`
+   - `efficientnetb0_best.h5`
+   - `requirements.txt`
 
-🌐 Deployment on Hugging Face
-Step 1: Create a Hugging Face Account
-Go to https://huggingface.co and sign up.
+4. The app will auto-deploy once all files are uploaded.
 
-Step 2: Create a New Space
-Click on "New Space"
+## Author
+Frough Hurmath S
+**Hurmath123**  
+[GitHub Profile](https://github.com/Hurmath123)
 
-Choose Gradio or Streamlit
+---
 
-Select Python
+## License
 
-Name your Space (e.g., animal-classifier)
-
-Upload the following files to the Space:
-
-app.py
-
-efficientnetb0_best.h5
-
-requirements.txt
-
-Step 3: Push to Hugging Face
-You can use Git or the web interface to push files:
-
-bash
-Copy
-Edit
-git lfs install
-git clone https://huggingface.co/spaces/YOUR_USERNAME/animal-classifier
-cd animal-classifier
-# Copy your files here
-git add .
-git commit -m "Initial commit"
-git push
-Make sure to include:
-
-nginx
-Copy
-Edit
-streamlit
-tensorflow
-numpy
-pillow
-in your requirements.txt.
-
-Once deployed, Hugging Face will automatically run app.py.
-
-🧑‍💻 Author
-Hurmath123
-🔗 GitHub
+This project is licensed under the [MIT License](LICENSE).
