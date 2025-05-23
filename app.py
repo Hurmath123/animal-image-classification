@@ -10,7 +10,7 @@ st.title("Animal Image Classification")
 st.write("Upload an image to classify the animal using a pre-trained EfficientNetB0 model.")
 
 # Remote URL to the model file (host this on Hugging Face or Google Drive with direct access)
-MODEL_URL = "https://huggingface.co/Frough11/animal-classification/blob/main/efficientnetb0_best.h5"
+MODEL_URL = ""https://huggingface.co/Frough11/animal-classifier/blob/main/efficientnetb0_best.h5""
 
 @st.cache_resource
 def load_remote_model():
