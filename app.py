@@ -1,3 +1,6 @@
+import os
+os.environ["XDG_CONFIG_HOME"] = "/tmp"
+os.environ["STREAMLIT_HOME"] = "/tmp"
 import streamlit as st
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
