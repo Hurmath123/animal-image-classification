@@ -95,6 +95,14 @@ streamlit run app.py
 
 4. The app will auto-deploy once all files are uploaded.
 
+---
+
+## 📁 Dataset
+
+The model was trained on [Frough11/animal_classes](https://huggingface.co/datasets/Frough11/animal_classes), a folder-based image classification dataset.
+
+---
+
 ## Author
 Frough Hurmath S
 **Hurmath123**  
